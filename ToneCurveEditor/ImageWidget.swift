@@ -142,7 +142,7 @@ class ImageWidget: UIControl , UINavigationControllerDelegate, UIImagePickerCont
         
         let filteredImageData = filter.valueForKey(kCIOutputImageKey) as! CIImage
         let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent)
-        let filteredImage = UIImage(CGImage: filteredImageRef)
+        let filteredImage = UIImage(CGImage: filteredImageRef!)
        
         return filteredImage
     }
